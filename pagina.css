@@ -1,0 +1,35 @@
+body{
+    justify-content: center;
+    display: flex;
+    background: center;
+    height: 0%;
+    margin: 0%;
+}
+
+.card {
+    display: inline-block;
+    position: relative;
+}
+
+#container {
+    display: inline-block;
+    position: relative;
+  }
+  
+  #container .titulo{
+    position: absolute;
+    top: 300px;
+    right: 500px;
+    font-size: 40px;
+    color: orange;
+    text-shadow: orange;
+  }
+
+  p {
+    position: absolute;
+    top: 300px;
+    right: 500px;
+    font-size: 40px;
+    color: white;
+    text-shadow: white;
+  }
