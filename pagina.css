@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'Schibsted Grotesk', sans-serif;
+  src: url('https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital@1&display=swap');
+}
+
 body{
     justify-content: center;
     display: flex;
@@ -11,12 +16,19 @@ body{
     position: relative;
 }
 
+button {
+  display: inline-block;
+  position: relative;
+  margin-top: 50%;
+  background-color: orange;
+}
+
 #container {
     display: inline-block;
     position: relative;
   }
   
-  #container .titulo{
+#container .titulo{
     position: absolute;
     top: 300px;
     right: 500px;
@@ -32,4 +44,11 @@ body{
     font-size: 40px;
     color: white;
     text-shadow: white;
+  }
+
+  input {
+    border-color: black;
+    margin-top: 100px;
+    width: 800px;
+    height: 800px;
   }
