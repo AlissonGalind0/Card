@@ -1,14 +1,38 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
 @font-face {
   font-family: 'Schibsted Grotesk', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  
   src: url('https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital@1&display=swap');
+  
+  src: url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
 }
 
 body{
     justify-content: center;
     display: flex;
-    background: center;
-    height: 0%;
-    margin: 0%;
+    align-items: center;
+    height: 100vh;
+}
+
+img{
+  width: 800px;
+}
+
+#container .texto{
+  position: absolute;
+  top: 300px;
+  right: 100px;
+  font-size: 30px;
+  color: orange;
+  text-shadow: orange;
 }
 
 .card {
@@ -30,9 +54,9 @@ button {
   
 #container .titulo{
     position: absolute;
-    top: 300px;
-    right: 500px;
-    font-size: 40px;
+    top: 250px;
+    right: 190px;
+    font-size: 30px;
     color: orange;
     text-shadow: orange;
   }
@@ -51,4 +75,9 @@ button {
     margin-top: 100px;
     width: 800px;
     height: 800px;
+  }
+
+  .texto{
+    width: 600px;
+    padding: 15px;
   }

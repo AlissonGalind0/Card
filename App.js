@@ -1,26 +1,21 @@
-async function pegarTexto (){
-    primeiroTexto = document.getElementById('#') 
-    segundoTexto = document.getElementById('#')
-    terceiroTexto = documento.getElementById('#')
+function downloadImagem() {
+    const imagem = document.querySelector("#imagem");
+    const url = imagem.src;
 
-    pegarTexto();
-}
+   
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = 'Card Melhoria.png'; 
+  
+    document.body.appendChild(link);
+    link.click();
 
-async function downloadBotao (){
-    document.getElementsByClassName('botao')
-}
+    
+    document.body.removeChild(link);
+  }
 
-async function teste (){
-    const testeTexto = "#"
-    const testeInputTexto = "#"
-}
+  
+  const botaoDownload = document.getElementById('download');
 
+  botaoDownload.addEventListener('click', downloadImagem);
 
-async function inputTexto (){
-    const arrTextoSalvo = ['#']
-
-}
-
-async function checkInput () {
-    const possivelCheck = ['#']   
-}
