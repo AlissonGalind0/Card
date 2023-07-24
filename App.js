@@ -19,3 +19,7 @@ function downloadImagem() {
 
   botaoDownload.addEventListener('click', downloadImagem);
 
+
+  function limparTexto (){
+  
+}

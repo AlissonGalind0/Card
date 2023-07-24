@@ -7,31 +7,47 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital@1&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
     <title>Card Melhoria</title>
     
 </head>
-<body>
-    
+
+<body class="p-3 mb-2 bg-dark-subtle text-emphasis-dark">
+
+<nav class="navbar bg-body-tertiary fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img  alt="Processos" width="30" height="24" class="d-inline-block align-text-top">
+      Download
+    </a>
+  </div>
+</nav>
+
+
+
+    <div class="p-3 mb-2 bg-dark-subtle text-emphasis-dark">
     <div class="card"> 
         
         <figure id="container">
-            <img id="imagem" src="/Card/img/melhoria.png"/>
+
+            <picture>
+                <source srcset="/Card/img/melhoria.png" type="image/svg+xml">
+                <img src="/Card/img/melhoria.png" class="img-fluid img-thumbnail" alt="...">
+              </picture>
+
             <div contenteditable="true" class="titulo">Relacionamento com o cliente</div>
             <div contenteditable="true" class="texto">
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </br> It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </br> It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
             </div>
         </figure>
     
     </div>
 
-    
-
-    <!-- <input type="text"> -->
-<section>
-    <button id="download">Download</button>
-    <button type="submit" onclick="">Limpar</button>
-</section>
-
-  <script type="text/javascript" src="App.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="App.js"></script>
 </body>
 </html>
