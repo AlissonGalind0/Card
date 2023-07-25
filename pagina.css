@@ -66,14 +66,7 @@ button {
     text-shadow: orange;
   }
 
-  p {
-    position: absolute;
-    top: 300px;
-    right: 500px;
-    font-size: 40px;
-    color: white;
-    text-shadow: white;
-  }
+ 
 
   input {
     border-color: black;

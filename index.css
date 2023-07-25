@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+}
+
+.cardsIndex{
+    display: flex;
+}
+
+.card{
+    align-self: center;
+}
+
+.ms-1 {
+    margin-left: (spacer * .25) !important;
+  }
