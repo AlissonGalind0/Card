@@ -23,3 +23,12 @@ function downloadImagem() {
   function limparTexto (){
   
 }
+
+function inserirNovo (){
+  
+  const btnConcluido = document.querySelector("#button-addon2")
+  const btnNExecutado = document.querySelector("#button-addon3")
+  const btnEmAndamento = document.querySelector("#button-addon4")
+
+
+}

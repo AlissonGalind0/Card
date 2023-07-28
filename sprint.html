@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="bg-light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="Stylesheet" type="text/css" href="/card/charts.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital@1&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+    <title>Digest</title>
+    
+</head>
+
+<body >
+<section class="barraNavegacao">   
+    <nav class="navbar navbar-expand-lg  bg-body-tertiary fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Digest Portal</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarScroll">
+            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/card/cardcreator.html">Criador de Cards</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Link
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Ação</a></li>
+                  <li><a class="dropdown-item" href="#">Outra Ação</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Somente isso aqui.</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-disabled="true">Link</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Buscar</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+</section>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<div class="container ">
+  <div>
+    <canvas id="myChart"></canvas>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+  <div class="input-group mb-3 column-md-2">
+    <button class="btn btn-outline-success" type="button" id="button-addon1">Novo</button>
+    <input type="number" class="form-control" style="min-width:300px;" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+  </div>
+  <div class="input-group mb-3">
+    <button class="btn btn-outline-success" type="button" id="button-addon2">Concluido</button>
+    <input type="number" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+  </div>
+  <div class="input-group mb-3">
+    <button class="btn btn-outline-success" type="button" id="button-addon3">Não Executado</button>
+    <input type="number" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+  </div>
+  <div class="input-group mb-3">
+    <button class="btn btn-outline-success" type="button" id="button-addon4">Em andamento</button>
+    <input type="number" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
+</div>  
+</div>
+  </div>
+  <script>
+    const ctx = document.getElementById('myChart');
+    const btnNovo = document.querySelector("#button-addon1").valueAsNumber
+    let camposX = ['Novo', 'Concluido', 'Não Executado', 'Em andamento']
+    
+    let camposY = [10,20,30,40,30]
+   
+    let descricaoChart = 'Sprint Atual - 19'
+  
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: camposX,
+        datasets: [{
+          label: descricaoChart,
+          data: camposY,
+          borderWidth: 1
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+  </script>
+</div>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="path/to/chartjs/dist/chart.umd.js"></script>
+    <script type="text/javascript" src="App.js"></script>
+
+
+</body>
+</html>
