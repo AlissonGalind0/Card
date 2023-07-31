@@ -15,9 +15,9 @@ function downloadImagem() {
   }
 
   
-  const botaoDownload = document.getElementById('download');
+  // const botaoDownload = document.getElementById('download');
 
-  botaoDownload.addEventListener('click', downloadImagem);
+  // botaoDownload.addEventListener('click', downloadImagem);
 
 
   function limparTexto (){

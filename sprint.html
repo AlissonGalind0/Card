@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="bg-light">
+<html lang="pt-br" data-bs-theme="bg-light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="Stylesheet" type="text/css" href="/card/charts.css">
+    <link rel="Stylesheet" type="text/css" href="/Card/charts.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital@1&display=swap" rel="stylesheet">
@@ -18,7 +18,7 @@
 <section class="barraNavegacao">   
     <nav class="navbar navbar-expand-lg  bg-body-tertiary fixed-top">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Digest Portal</a>
+          <a class="navbar-brand" href="/Card/index.html">Digest Portal</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -28,7 +28,7 @@
                 <a class="nav-link active" aria-current="page" href="#">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/card/cardcreator.html">Criador de Cards</a>
+                <a class="nav-link" href="/card/cardcreator.html">DashBoard</a>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -53,278 +53,14 @@
         </div>
       </nav>
 </section>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-<!-- <div class="container-fluid row">
-  <div class="" style="height: 258px; width: 516px;" width="516" height="258">
-  <div>
-    <canvas id="myChart" ></canvas>
-  </div>
-</div>
-  <div class="row">
-    <div class="col-md-4">
-  <div class="input-group column-md-2 m-0 mb-1">
-    <button class="btn btn-outline-success btn-sm" type="button" id="button-addon1">Novo</button>
-    <input type="number" class="form-control p-0" style="min-width:50px;" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
-  </div>
-  <div class="input-group column-md-2 m-0 mb-1">
-    <button class="btn btn-outline-success btn-sm" type="button" id="button-addon2">Concluido</button>
-    <input type="number" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
-  </div>
-  <div class="input-group column-md-2 m-0 mb-1">
-    <button class="btn btn-outline-success btn-sm" type="button" id="button-addon3">Não Executado</button>
-    <input type="number" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
-  </div>
-  <div class="input-group column-md-2 m-0 mb-1">
-    <button class="btn btn-outline-success btn-sm" type="button" id="button-addon4">Em andamento</button>
-    <input type="number" class="form-control" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1">
-</div>  
-</div>
-  </div>
-  <script>
-    const ctx = document.getElementById('myChart');
-    const btnNovo = document.querySelector("#button-addon1").valueAsNumber
-    let camposX = ['Novo', 'Concluido', 'Não Executado', 'Em andamento']
-    
-    let camposY = [10,20,30,40,30]
-   
-    let descricaoChart = 'Sprint Atual - 19'
-  
-    new Chart(ctx, {
-      type: 'bar',
-      data: {
-        labels: camposX,
-        datasets: [{
-          label: descricaoChart,
-          data: camposY,
-          borderWidth: 1
-        }]
-      },
-      options: {
-        scales: {
-          y: {
-            beginAtZero: true
-          }
-        }
-      }
-    });
-  </script>
-</div> -->
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+<script src="https://code.highcharts.com/gantt/highcharts-gantt.js"></script>
+<script src="https://code.highcharts.com/gantt/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/gantt/modules/accessibility.js"></script>
+<div></div> 
+<div id="container"></div>
 
-<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-     <div id="chart_div">
-
-     </div>
- <script>  
-     google.charts.load('current', {
-      'packages': ['gantt']
-    });
-    google.charts.setOnLoadCallback(drawChart);
-
-    function drawChart() {
-
-      var data = new google.visualization.DataTable();
-      data.addColumn('string', 'Task ID');
-      data.addColumn('string', 'Task Name');
-      data.addColumn('string', 'Resource');
-      data.addColumn('date', 'Start Date');
-      data.addColumn('date', 'End Date');
-      data.addColumn('number', 'Duration');
-      data.addColumn('number', 'Percent Complete');
-      data.addColumn('string', 'Dependencies');
-
-      data.addRows([
-        ['2014Spring', 'Spring 2014', 'spring',
-          new Date(2023, 2, 22), new Date(2014, 5, 20), null, 100, null
-        ],
-        ['', '', 'summer',
-          new Date(2014, 5, 21), new Date(2014, 8, 20), null, 100, null
-        ],
-        ['2014Autumn', 'Autumn 2014', 'autumn',
-          new Date(2014, 8, 21), new Date(2014, 11, 20), null, 100, null
-        ],
-        ['2014Winter', 'Winter 2014', 'winter',
-          new Date(2014, 11, 21), new Date(2015, 2, 21), null, 100, null
-        ],
-        ['2015Spring', 'Spring 2015', 'spring',
-          new Date(2015, 2, 22), new Date(2015, 5, 20), null, 50, null
-        ],
-        ['2015Summer', 'Summer 2015', 'summer',
-          new Date(2015, 5, 21), new Date(2015, 8, 20), null, 0, null
-        ],
-        ['2015Autumn', 'Autumn 2015', 'autumn',
-          new Date(2015, 8, 21), new Date(2015, 11, 20), null, 0, null
-        ],
-        ['2015Winter', 'Winter 2015', 'winter',
-          new Date(2015, 11, 21), new Date(2016, 2, 21), null, 0, null
-        ],
-        ['Football', 'Football Season', 'sports',
-          new Date(2014, 8, 4), new Date(2015, 1, 1), null, 100, null
-        ],
-        ['Baseball', 'Baseball Season', 'sports',
-          new Date(2015, 2, 31), new Date(2015, 9, 20), null, 14, null
-        ],
-        ['Basketball', 'Basketball Season', 'sports',
-          new Date(2014, 9, 28), new Date(2015, 5, 20), null, 86, null
-        ],
-        ['Hockey', 'Hockey Season', 'sports',
-          new Date(2014, 9, 8), new Date(2015, 5, 21), null, 89, null
-        ]
-      ]);
-
-      var options = {
-        height: 470,
-        gantt: {
-          trackHeight: 30
-        }
-      };
-
-      var chart = new google.visualization.Gantt(document.getElementById('chart_div'));
-
-      chart.draw(data, options);
-    }
-    google.charts.load('current', {
-      'packages': ['gantt']
-    });
-    google.charts.setOnLoadCallback(drawChart);
-
-    function drawChart() {
-
-      var data = new google.visualization.DataTable();
-      data.addColumn('string', 'Task ID');
-      data.addColumn('string', 'Task Name');
-      data.addColumn('string', 'Resource');
-      data.addColumn('date', 'Start Date');
-      data.addColumn('date', 'End Date');
-      data.addColumn('number', 'Duration');
-      data.addColumn('number', 'Percent Complete');
-      data.addColumn('string', 'Dependencies');
-
-      data.addRows([
-        ['2014Spring', 'Spring 2014', 'spring',
-          new Date(2023, 2, 22), new Date(2014, 5, 20), null, 100, null
-        ],
-        ['', '', 'summer',
-          new Date(2014, 5, 21), new Date(2014, 8, 20), null, 100, null
-        ],
-        ['2014Autumn', 'Autumn 2014', 'autumn',
-          new Date(2014, 8, 21), new Date(2014, 11, 20), null, 100, null
-        ],
-        ['2014Winter', 'Winter 2014', 'winter',
-          new Date(2014, 11, 21), new Date(2015, 2, 21), null, 100, null
-        ],
-        ['2015Spring', 'Spring 2015', 'spring',
-          new Date(2015, 2, 22), new Date(2015, 5, 20), null, 50, null
-        ],
-        ['2015Summer', 'Summer 2015', 'summer',
-          new Date(2015, 5, 21), new Date(2015, 8, 20), null, 0, null
-        ],
-        ['2015Autumn', 'Autumn 2015', 'autumn',
-          new Date(2015, 8, 21), new Date(2015, 11, 20), null, 0, null
-        ],
-        ['2015Winter', 'Winter 2015', 'winter',
-          new Date(2015, 11, 21), new Date(2016, 2, 21), null, 0, null
-        ],
-        ['Football', 'Football Season', 'sports',
-          new Date(2014, 8, 4), new Date(2015, 1, 1), null, 100, null
-        ],
-        ['Baseball', 'Baseball Season', 'sports',
-          new Date(2015, 2, 31), new Date(2015, 9, 20), null, 14, null
-        ],
-        ['Basketball', 'Basketball Season', 'sports',
-          new Date(2014, 9, 28), new Date(2015, 5, 20), null, 86, null
-        ],
-        ['Hockey', 'Hockey Season', 'sports',
-          new Date(2014, 9, 8), new Date(2015, 5, 21), null, 89, null
-        ]
-      ]);
-
-      var options = {
-        height: 470,
-        gantt: {
-          trackHeight: 30
-        }
-      };
-
-      var chart = new google.visualization.Gantt(document.getElementById('chart_div'));
-
-      chart.draw(data, options);
-    }
-
-    google.charts.load('current', {
-      'packages': ['gantt']
-    });
-    google.charts.setOnLoadCallback(drawChart);
-
-    function drawChart() {
-
-      var data = new google.visualization.DataTable();
-      data.addColumn('string', 'Task ID');
-      data.addColumn('string', 'Task Name');
-      data.addColumn('string', 'Resource');
-      data.addColumn('date', 'Start Date');
-      data.addColumn('date', 'End Date');
-      data.addColumn('number', 'Duration');
-      data.addColumn('number', 'Percent Complete');
-      data.addColumn('string', 'Dependencies');
-
-      data.addRows([
-        ['2014Spring', 'Spring 2014', 'spring',
-          new Date(2023, 2, 22), new Date(2014, 5, 20), null, 100, null
-        ],
-        ['', '', 'summer',
-          new Date(2014, 5, 21), new Date(2014, 8, 20), null, 100, null
-        ],
-        ['2014Autumn', 'Autumn 2014', 'autumn',
-          new Date(2014, 8, 21), new Date(2014, 11, 20), null, 100, null
-        ],
-        ['2014Winter', 'Winter 2014', 'winter',
-          new Date(2014, 11, 21), new Date(2015, 2, 21), null, 100, null
-        ],
-        ['2015Spring', 'Spring 2015', 'spring',
-          new Date(2015, 2, 22), new Date(2015, 5, 20), null, 50, null
-        ],
-        ['2015Summer', 'Summer 2015', 'summer',
-          new Date(2015, 5, 21), new Date(2015, 8, 20), null, 0, null
-        ],
-        ['2015Autumn', 'Autumn 2015', 'autumn',
-          new Date(2015, 8, 21), new Date(2015, 11, 20), null, 0, null
-        ],
-        ['2015Winter', 'Winter 2015', 'winter',
-          new Date(2015, 11, 21), new Date(2016, 2, 21), null, 0, null
-        ],
-        ['Football', 'Football Season', 'sports',
-          new Date(2014, 8, 4), new Date(2015, 1, 1), null, 100, null
-        ],
-        ['Baseball', 'Baseball Season', 'sports',
-          new Date(2015, 2, 31), new Date(2015, 9, 20), null, 14, null
-        ],
-        ['Basketball', 'Basketball Season', 'sports',
-          new Date(2014, 9, 28), new Date(2015, 5, 20), null, 86, null
-        ],
-        ['Hockey', 'Hockey Season', 'sports',
-          new Date(2014, 9, 8), new Date(2015, 5, 21), null, 89, null
-        ]
-      ]);
-
-      var options = {
-        height: 470,
-        gantt: {
-          trackHeight: 30
-        }
-      };
-
-      var chart = new google.visualization.Gantt(document.getElementById('chart_div'));
-
-      chart.draw(data, options);
-    }
-
-</script>  
-
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="path/to/chartjs/dist/chart.umd.js"></script>
-    <script type="text/javascript" src="App.js"></script>
-
-
+  <script type="text/javascript" src="/Card/charts.js"></script>
 </body>
 </html>
