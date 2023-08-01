@@ -6,10 +6,10 @@ window.Apex = {
     },
   },
   stroke: {
-    width: 3
+    width: 1
   },
   dataLabels: {
-    enabled: true
+    enabled: false
   },
   tooltip: {
     theme: 'dark'
@@ -42,13 +42,13 @@ var spark1 = {
     }
   },
   series: [{
-    data: [25, 66, 41, 59, 25, 44, 12, 36, 9, 21]
+    data: [98, 69, 29, 11, 3]
   }],
   stroke: {
     curve: 'smooth'
   },
   markers: {
-    size: 0
+    size: 1
   },
   grid: {
     padding: {
@@ -60,7 +60,10 @@ var spark1 = {
   colors: ['#fff'],
   tooltip: {
     x: {
-      show: false
+      show: true,
+      show: true,
+          format: 'dd MMM',
+          formatter: undefined,
     },
     y: {
       title: {
@@ -90,7 +93,7 @@ var spark2 = {
     }
   },
   series: [{
-    data: [12, 14, 2, 47, 32, 44, 14, 55, 41, 69]
+    data: [12, 14, 2, 47, 32]
   }],
   stroke: {
     curve: 'smooth'
@@ -108,7 +111,7 @@ var spark2 = {
   colors: ['#fff'],
   tooltip: {
     x: {
-      show: false
+      show: true
     },
     y: {
       title: {
@@ -138,7 +141,7 @@ var spark3 = {
     }
   },
   series: [{
-    data: [47, 45, 74, 32, 56, 31, 44, 33, 45, 19]
+    data: [47, 45, 74, 32, 56]
   }],
   stroke: {
     curve: 'smooth'
@@ -161,7 +164,8 @@ var spark3 = {
   },
   tooltip: {
     x: {
-      show: false
+      show: true,
+      
     },
     y: {
       title: {
@@ -191,7 +195,7 @@ var spark4 = {
     }
   },
   series: [{
-    data: [15, 75, 47, 65, 14, 32, 19, 54, 44, 61]
+    data: [15, 75, 47, 65, 14]
   }],
   stroke: {
     curve: 'smooth'
@@ -214,7 +218,7 @@ var spark4 = {
   },
   tooltip: {
     x: {
-      show: false
+      show: true,
     },
     y: {
       title: {

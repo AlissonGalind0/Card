@@ -1,0 +1,678 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>WIKI - Digest Processos</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-interactiveBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="c14e95d4-df2c-4ec0-a6ed-be34966f7130" class="page sans"><header><img class="page-cover-image" src="https://www.notion.so/images/page-cover/nasa_eva_during_skylab_3.jpg" style="object-position:center 40%"/><div class="page-header-icon page-header-icon-with-cover"><img class="icon" src="https://www.notion.so/icons/cloud-yes_blue.svg"/></div><h1 class="page-title">WIKI - <strong>Digest Processos</strong></h1><p class="page-description"></p></header><div class="page-body"><p id="3aee12c6-b8f6-4e07-9c92-c1c7d86fc248" class="">Olá, seja bem-vindo(a) à WIKI da <strong>Assessoria de Gestão por Processos (Digest Processos)!</strong></p><p id="bdd6233b-46f6-4acc-af34-a854f32a826e" class="">Neste ambiente você irá encontrar informações sobre a organização da Digest Processos, as documentações dos processos e o compartilhamento de informações da área.</p><h1 id="2c5f870a-779e-4a65-b0dc-c6f55365ac6d" class=""><span style="border-bottom:0.05em solid"><strong>Organização da Digest Processos</strong></span></h1><p id="09598c08-c020-4670-8f65-eaba9373ae89" class="">A Digest Processos é responsável pelo macroprocesso de Gestão por Processos, que é formado pelos pilares de Mapeamento de Processos, Melhoria Contínua e Gestão de Documentos.</p><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0"><span style="border-bottom:0.05em solid">Pilar de </span><span style="border-bottom:0.05em solid"><strong>Arquitetura de Processos e Documentos</strong></span></summary><div class="indented"><p id="87eb22ec-30a7-4ba3-a02a-5515ab205eaf" class="">O pilar de <mark class="highlight-blue"><a href="https://wiki.sistemafiea.com.br/e/pt-br/Processos/arquitetura-processos-documentos">Arquitetura de Processos e Documentos</a></mark><mark class="highlight-blue"> </mark>desenvolve ações relacionadas com:<div class="indented"><ol type="1" id="7531f0db-db06-40a5-8687-f0664848afa6" class="numbered-list" start="1"><li>Mapeamento de processos (automatizados ou não);</li></ol><ol type="1" id="0726cd8a-3b67-4c06-8346-ce6d042b32bd" class="numbered-list" start="2"><li>Revisão de processos;</li></ol><ol type="1" id="d0e06763-6085-4d2c-8ef6-0f5ec3848833" class="numbered-list" start="3"><li>Implantação assistida de ferramentas e sistemas que automatizam processos.</li></ol><ol type="1" id="7da8f890-98a2-4720-87ef-141051621482" class="numbered-list" start="4"><li>Gerenciar a guarda documental, por meio de um Sistema de Gestão de Documentos (GED), que contempla: Armazenamento, gerenciamento, rastreamento, compartilhamento e descarte de documentos, conforme legislação vigente.</li></ol></div></p></div></details><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0"><span style="border-bottom:0.05em solid">Pilar de </span><span style="border-bottom:0.05em solid"><strong>Melhoria Contínua</strong></span></summary><div class="indented"><p id="84567bfe-ec1b-4f1d-bc17-1ad097802c4d" class="">O pilar de Melhoria Contínua desenvolve ações relacionadas com:<div class="indented"><ol type="1" id="7f6dfeb2-6b00-4564-910e-17b443398ce4" class="numbered-list" start="1"><li>Atendimentos de chamados, recebidos através da Central de Atendimento;</li></ol><ol type="1" id="ba520746-4edf-4080-bdeb-a027edeed1a2" class="numbered-list" start="2"><li>Mapeamento e implementação de melhorias pontuais;</li></ol></div></p><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="14ad451a-75ed-4afb-afa1-cb241b6e1b04"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">Os pilares de Mapeamento e de Melhoria contam com a área de Tecnologia da Informação para implementação de parte das necessidades de automatização dos processos.</div></figure></div></details><details open=""><summary style="font-weight:600;font-size:1.25em;line-height:1.3;margin:0"><span style="border-bottom:0.05em solid">Pilar de Gestão de Documentos</span></summary><div class="indented"><p id="ef904ed1-e64e-48fc-9b9f-27e32b063d9c" class="">Área responsável por gerenciar a guarda documental, por meio de um Sistema de Gestão de Documentos (GED), que contempla:</p><ol type="1" id="88537a22-5544-456a-93b7-0ea293ae055d" class="numbered-list" start="1"><li>Armazenamento, gerenciamento, rastreamento, compartilhamento e descarte de documentos, conforme legislação vigente.</li></ol></div></details><p id="8cc87840-395f-4df8-8fa6-3c5136b27da3" class="">
+</p><p id="6b05df70-f035-46cd-95eb-d6ae1deddbb5" class="">Assim, todo gerenciamento de informações é organizado e disponibilidade aqui, na WIKI.</p><p id="16e5777c-c2a5-4dbc-814e-0ba96e929537" class="">Toda a estrutura de documentação foi organizada de acordo com a cadeia de valor, que é uma representação visual, um modelo que descreve as atividades e os processos envolvidos da criação à entrega de um produto ou serviço. Essa representação destaca as etapas sequenciais e interconectadas que ocorrem dentro de uma organização para gerar valor aos clientes.</p><p id="6c298a7d-54ad-4b2e-96bd-ddd9df1e33e4" class="">A cadeia de valor de processos é baseada no conceito de cadeia de valor, que foi introduzido por Michael Porter em seu livro &quot;Vantagem Competitiva&quot; publicado em 1985. A ideia central é que uma organização é composta por uma série de atividades interligadas que contribuem para a criação de valor para o cliente final.</p><p id="650d050a-c1e3-40cf-91e8-c4ab8c44f056" class="">Assim, nossa estrutura segue a lógica:</p><ul id="e25f4767-7c0a-45e8-b9d1-9a2a3a182f96" class="toggle"><li><details open=""><summary>Macroprocesso</summary><ul id="7016ff9a-80c3-4f6e-afa1-0778efaf6529" class="toggle"><li><details open=""><summary>Processos</summary><ul id="a54fc212-d96a-4348-ac86-9269a3745e1a" class="toggle"><li><details open=""><summary>Subprocessos</summary><p id="81a76f31-324b-4b03-aa6a-f6c26cb2191b" class="">Onde cada nível possui toda informação existente para o item acessado.</p></details></li></ul></details></li></ul></details></li></ul><p id="a2a2aa42-ea02-43a5-a924-85fb080ada52" class="">Caso você precise de algum documento ou informação referente a algum subprocesso, por exemplo, deverá acessar o caminho macroprocesso &gt; processo &gt; subprocesso que deseja acessar.</p><figure id="de09ac29-b38e-486f-a2b4-09909370c180" class="image"><a href="WIKI%20-%20Digest%20Processos%20c14e95d4df2c4ec0a6edbe34966f7130/2._Cadeia_de_Valor_SESISENAI_2022_(1).png"><img style="width:768px" src="WIKI%20-%20Digest%20Processos%20c14e95d4df2c4ec0a6edbe34966f7130/2._Cadeia_de_Valor_SESISENAI_2022_(1).png"/></a><figcaption>Figura - Cadeia de Valor do Sistema de Gestão da Federação das Indústrias do Estado de Alagoas (FIEA)</figcaption></figure><div id="f707f442-ed40-4e03-b62a-14621353e537" class="column-list"><div id="2402c328-d64b-42d4-bd2d-ed7b033bf061" style="width:100%" class="column"><ul id="c122a969-1405-4d93-8928-73872347d609" class="toggle"><li><details open=""><summary><mark class="highlight-teal"><strong>Processos de Gestão</strong></mark></summary><figure id="6e58ed7e-230a-4d78-a278-d85bf0de7a9e" class="link-to-page"><a href="https://www.notion.so/1-Gest-o-para-a-Excel-ncia-6e58ed7e230a4d78a278d85bf0de7a9e?pvs=21"><img class="icon" src="https://www.notion.so/icons/folder_green.svg"/>1. Gestão para a Excelência</a></figure><figure id="d200795f-3c3c-4c8f-83bc-2944ac110db1" class="link-to-page"><a href="https://www.notion.so/2-Governan-a-Corporativa-d200795f3c3c4c8f83bc2944ac110db1?pvs=21"><img class="icon" src="https://www.notion.so/icons/folder_green.svg"/>2. Governança Corporativa</a></figure><figure id="49da4284-d13e-430b-97c4-3b845236e483" class="link-to-page"><a href="https://www.notion.so/3-Gest-o-da-Estrat-gia-49da4284d13e430b97c43b845236e483?pvs=21"><img class="icon" src="https://www.notion.so/icons/folder_green.svg"/>3. Gestão da Estratégia</a></figure><figure id="a07da38b-8c5f-4cae-89c7-b74b2fb86208" class="link-to-page"><a href="https://www.notion.so/4-Gest-o-por-Processos-a07da38b8c5f4cae89c7b74b2fb86208?pvs=21"><img class="icon" src="https://www.notion.so/icons/folder_green.svg"/>4. Gestão por Processos</a></figure><figure id="3d1b5fa3-16c7-4136-b02c-8939bde640ce" class="link-to-page"><a href="https://www.notion.so/5-Gente-e-Cultura-Organizacional-3d1b5fa316c74136b02c8939bde640ce?pvs=21"><img class="icon" src="https://www.notion.so/icons/folder_green.svg"/>5. Gente e Cultura Organizacional</a></figure><figure id="70bce0e0-17d4-4836-80d6-7d381919f4d4" class="link-to-page"><a href="https://www.notion.so/6-Data-Analytics-70bce0e017d4483680d67d381919f4d4?pvs=21"><img class="icon" src="https://www.notion.so/icons/folder_green.svg"/>6. Data Analytics</a></figure></details></li></ul></div><div id="36f5705e-db30-49ef-b5d2-a92aa40b857c" style="width:100%" class="column"><ul id="a8245655-5c5f-4ee9-9c88-f4fd77739a6b" class="toggle"><li><details open=""><summary><mark class="highlight-blue"><strong>Processos de Negócio</strong></mark></summary><figure id="1e9a7524-6e30-4792-939a-a9cfe0244261" class="link-to-page"><a href="https://www.notion.so/7-Relacionamento-com-o-Cliente-da-Educa-o-B-sica-1e9a75246e304792939aa9cfe0244261?pvs=21"><img class="icon" src="https://www.notion.so/icons/folder_blue.svg"/>7. Relacionamento com o Cliente da Educação Básica</a></figure><figure id="d0d7d7a0-3979-4b2d-bc74-00616b1e7656" class="link-to-page"><a href="https://www.notion.so/8-Relacionamento-com-o-Cliente-da-Educa-o-Profissional-d0d7d7a039794b2dbc7400616b1e7656?pvs=21"><img class="icon" src="https://www.notion.so/icons/folder_blue.svg"/>8. Relacionamento com o Cliente da Educação Profissional</a></figure><figure id="59d89715-7d5b-48b5-9bc9-591dbaeb77ba" class="link-to-page"><a href="https://www.notion.so/9-Relacionamento-com-o-Cliente-de-Inova-o-e-Tecnologia-59d897157d5b48b59bc9591dbaeb77ba?pvs=21"><img class="icon" src="https://www.notion.so/icons/folder_blue.svg"/>9. Relacionamento com o Cliente de Inovação e Tecnologia</a></figure><figure id="11cdfd18-803d-4228-b7fb-4b2a9df81710" class="link-to-page"><a href="https://www.notion.so/10-Relacionamento-com-o-Cliente-de-Seguran-a-e-Sa-de-para-Ind-stria-11cdfd18803d4228b7fb4b2a9df81710?pvs=21"><img class="icon" src="https://www.notion.so/icons/folder_blue.svg"/>10. Relacionamento com o Cliente de Segurança e Saúde para Indústria</a></figure><figure id="71342802-4a8d-4dc3-9a05-860b074eaab0" class="link-to-page"><a href="https://www.notion.so/11-Gest-o-de-Marketing-713428024a8d4dc39a05860b074eaab0?pvs=21"><img class="icon" src="https://www.notion.so/icons/folder_blue.svg"/>11. Gestão de Marketing</a></figure></details></li></ul></div><div id="65b65e42-985e-4f17-a4a4-636d0be09e1b" style="width:100%" class="column"><ul id="63411334-d433-437a-9af6-617ef93e073d" class="toggle"><li><details open=""><summary><strong><mark class="highlight-orange">Processos de Apoio</mark></strong></summary><figure id="80cead45-9090-4a9f-b885-0f1ba7029be9" class="link-to-page"><a href="https://www.notion.so/12-Tecnologia-da-Informa-o-80cead4590904a9fb8850f1ba7029be9?pvs=21"><img class="icon" src="https://www.notion.so/icons/folder_orange.svg"/>12. Tecnologia da Informação</a></figure><figure id="12987de1-ec05-4abf-a8a2-16779b2df856" class="link-to-page"><a href="https://www.notion.so/13-Gest-o-Financeira-12987de1ec054abfa8a216779b2df856?pvs=21"><img class="icon" src="https://www.notion.so/icons/folder_orange.svg"/>13. Gestão Financeira</a></figure><figure id="30f61581-cc75-4f4a-8ffe-b433d161a5a2" class="link-to-page"><a href="https://www.notion.so/14-Gest-o-Administrativa-30f61581cc754f4a8ffeb433d161a5a2?pvs=21"><img class="icon" src="https://www.notion.so/icons/folder_orange.svg"/>14. Gestão Administrativa</a></figure><figure id="c9b3c7a8-1a9c-417d-b957-b8c146d370db" class="link-to-page"><a href="https://www.notion.so/15-Gest-o-Socioambiental-c9b3c7a81a9c417db957b8c146d370db?pvs=21"><img class="icon" src="https://www.notion.so/icons/folder_orange.svg"/>15. Gestão Socioambiental</a></figure></details></li></ul></div></div><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="62f9dc92-f2e4-437d-80f4-2aa4c1104484"><div style="font-size:1.5em"><img class="icon" src="https://www.notion.so/icons/warning_yellow.svg"/></div><div style="width:100%">Em caso de erro em qualquer etapa de execução de algum processo, o usuário deve abrir chamado, por meio do<mark class="highlight-blue"> </mark><mark class="highlight-blue"><a href="https://sistemafiea.sysepa.com.br/epa/login.php">EPA</a></mark>. O atendimento é realizado pela Equipe de Suporte a Processos, da Digest Processos. Em caso de dúvidas, acessar o manual de Gestão de Chamados.<figure id="c074a3bc-6dff-40ba-aa74-7dfdacb46d38"><div class="source"><a href="WIKI%20-%20Digest%20Processos%20c14e95d4df2c4ec0a6edbe34966f7130/Gesto_de_Chamados_-_EPA.pdf">Gestão de Chamados - EPA.pdf</a></div></figure></div></figure><p id="cdd7eebb-5a9e-4948-af2b-741794704454" class="">
+</p></div></article></body></html>
