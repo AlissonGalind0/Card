@@ -7,7 +7,8 @@
 
 body{
     
-    display: flex;
+    display: block;
+
     align-items: center;
     height: 100vh;
 }
@@ -57,14 +58,30 @@ h5{
 
 .proGestao{
     background-color:antiquewhite;
-    border-radius: 1%;
     min-width: 1500px;
     padding-top: 0%;
-    top: ;
+    display: block;
+    margin-top: 180px;
+    
+}
+
+.proNegocio{
+    background-color:antiquewhite;
+    min-width: 1500px;
+    align-self: baseline;
+    margin-top: 10px;
+   
+}
+
+.proApoio{
+    background-color:antiquewhite;
+    min-width: 1500px;
+    align-self: baseline;
+    margin-top: 10px;
 }
 
 .listaBotoes {
-    width: 20%;
+    width: 19%;
 }
 
 /* .textoHorizontal{
