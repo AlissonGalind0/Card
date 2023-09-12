@@ -1,3 +1,9 @@
+val1 = 25,
+val2 = 35,
+val3 = 45,
+val4 = 55,
+val5 = 65,
+
 window.Apex = {
   chart: {
     foreColor: '#ccc',
@@ -42,7 +48,7 @@ var spark1 = {
     }
   },
   series: [{
-    data: [98, 69, 29, 11, 3]
+    data: [val1, val2, val3, val4, val5]
   }],
   stroke: {
     curve: 'smooth'
@@ -270,7 +276,7 @@ var optionsLine = {
     }
   ],
   title: {
-    text: 'Macro Processos',
+    text: 'Macro Atividades',
     size: '15px',
     align: 'left',
     offsetY: 1,
@@ -294,7 +300,7 @@ var optionsLine = {
       bottom: 0
     }
   },
-  labels: ['01/01/2023', '15/07/2023','01/01/2025',],
+  labels: ['2023', '2024','2025',],
   xaxis: {
     tooltip: {
       enabled: false
